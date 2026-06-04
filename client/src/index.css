@@ -1,0 +1,78 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+ 
+:root {
+  --bg: #080b0f;
+  --bg-2: #0d1117;
+  --surface: #111820;
+  --surface-2: #1a2330;
+  --surface-3: #1e2a3a;
+  --border: #1e2d3d;
+  --border-2: #2a3f55;
+  --accent: #00e5a0;
+  --accent-dim: rgba(0, 229, 160, 0.08);
+  --accent-glow: rgba(0, 229, 160, 0.15);
+  --accent-hover: #00ffb3;
+  --accent-2: #0ea5e9;
+  --accent-2-dim: rgba(14, 165, 233, 0.1);
+  --orange: #ff6b35;
+  --orange-dim: rgba(255, 107, 53, 0.1);
+  --text: #e8f0f8;
+  --text-muted: #6b8aaa;
+  --text-dim: #3a5068;
+  --danger: #ff4d6a;
+  --danger-dim: rgba(255, 77, 106, 0.12);
+  --overdue: #ff6b35;
+  --overdue-dim: rgba(255, 107, 53, 0.1);
+  --radius: 14px;
+  --radius-sm: 8px;
+  --radius-xs: 5px;
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --transition: 0.18s ease;
+}
+ 
+html { font-size: 16px; }
+ 
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-weight: 400;
+  line-height: 1.6;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  background-image:
+    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(0, 229, 160, 0.07) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 30% at 90% 20%, rgba(14, 165, 233, 0.05) 0%, transparent 50%);
+}
+ 
+button { cursor: pointer; border: none; background: none; font-family: var(--font-body); }
+input, textarea { font-family: var(--font-body); }
+ 
+::selection { background: var(--accent); color: var(--bg); }
+ 
+::-webkit-scrollbar { width: 5px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+ 
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(14px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.97); }
+  to   { opacity: 1; transform: scale(1); }
+}
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+ 
+.fade-up { animation: fadeUp 0.32s cubic-bezier(0.22, 1, 0.36, 1) both; }

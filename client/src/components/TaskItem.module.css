@@ -1,0 +1,148 @@
+.item {
+  list-style: none;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 18px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  transition: border-color var(--transition), background var(--transition);
+}
+ 
+.item:hover {
+  border-color: var(--text-dim);
+}
+ 
+.item.overdue {
+  border-color: var(--overdue);
+  background: var(--overdue-dim);
+}
+ 
+.item.completed {
+  opacity: 0.55;
+}
+ 
+.left {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  flex: 1;
+  min-width: 0;
+}
+ 
+.check {
+  width: 20px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 50%;
+  border: 2px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2px;
+  transition: border-color var(--transition), background var(--transition), color var(--transition);
+  color: var(--bg);
+}
+ 
+.check:hover {
+  border-color: var(--accent);
+}
+ 
+.check.checked {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: var(--bg);
+}
+ 
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 0;
+}
+ 
+.title {
+  font-size: 0.97rem;
+  font-weight: 500;
+  color: var(--text);
+  word-break: break-word;
+}
+ 
+.completed .title {
+  text-decoration: line-through;
+  color: var(--text-muted);
+}
+ 
+.desc {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  line-height: 1.5;
+  word-break: break-word;
+}
+ 
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}
+ 
+.due {
+  font-size: 0.75rem;
+  color: var(--text-dim);
+  padding: 2px 8px;
+  background: var(--surface-2);
+  border-radius: 20px;
+  border: 1px solid var(--border);
+}
+ 
+.overdueLabel {
+  color: var(--overdue);
+  border-color: var(--overdue);
+  background: var(--overdue-dim);
+}
+ 
+.actions {
+  display: flex;
+  gap: 4px;
+  align-items: center;
+  flex-shrink: 0;
+}
+ 
+.editBtn,
+.deleteBtn {
+  width: 30px;
+  height: 30px;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--text-dim);
+  transition: color var(--transition), background var(--transition);
+}
+ 
+.editBtn:hover {
+  color: var(--accent);
+  background: var(--accent-dim);
+}
+ 
+.deleteBtn:hover {
+  color: var(--danger);
+  background: var(--danger-dim);
+}
+ 
+.deleteBtn.confirmDelete {
+  width: auto;
+  padding: 0 10px;
+  color: var(--danger);
+  background: var(--danger-dim);
+  border: 1px solid var(--danger);
+}
+ 
+.confirmText {
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
+}

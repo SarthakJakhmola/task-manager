@@ -1,0 +1,115 @@
+.formCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 24px;
+  animation: scaleIn 0.2s ease both;
+}
+ 
+.formTitle {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: var(--accent);
+  letter-spacing: -0.02em;
+}
+ 
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+ 
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+ 
+.label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+ 
+.input,
+.textarea {
+  background: var(--surface-2);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  transition: border-color var(--transition);
+  outline: none;
+  resize: none;
+}
+ 
+.input:focus,
+.textarea:focus {
+  border-color: var(--accent);
+}
+ 
+.input::placeholder,
+.textarea::placeholder {
+  color: var(--text-dim);
+}
+ 
+/* date input styling */
+.input[type='date']::-webkit-calendar-picker-indicator {
+  filter: invert(0.5);
+  cursor: pointer;
+}
+ 
+.error {
+  font-size: 0.85rem;
+  color: var(--danger);
+  padding: 8px 12px;
+  background: var(--danger-dim);
+  border-radius: var(--radius-sm);
+}
+ 
+.actions {
+  display: flex;
+  gap: 10px;
+  justify-content: flex-end;
+  margin-top: 4px;
+}
+ 
+.cancelBtn {
+  padding: 9px 20px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--text-muted);
+  background: transparent;
+  border: 1px solid var(--border);
+  transition: color var(--transition), border-color var(--transition);
+}
+ 
+.cancelBtn:hover {
+  color: var(--text);
+  border-color: var(--text-muted);
+}
+ 
+.submitBtn {
+  padding: 9px 22px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--bg);
+  background: var(--accent);
+  transition: background var(--transition), opacity var(--transition);
+  font-family: var(--font-display);
+}
+ 
+.submitBtn:hover {
+  background: var(--accent-hover);
+}
+ 
+.submitBtn:disabled {
+  opacity: 0.6;
+}
