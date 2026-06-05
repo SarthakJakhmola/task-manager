@@ -5,7 +5,9 @@ const taskRoutes = require('./routes/tasks');
 const app = express();
 const PORT = process.env.PORT || 4000;
  
-app.use(cors());
+app.use(cors({
+  origin: ['https://task-manager-5e5i.vercel.app', 'http://localhost:3000', 'http://localhost:5173']
+}));
 app.use(express.json());
  
 app.use('/api/tasks', taskRoutes);
