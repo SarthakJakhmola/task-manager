@@ -1,4 +1,4 @@
-const BASE = '/api/tasks';
+const BASE = 'https://task-manager-api-e4cz.onrender.com/api/tasks';
  
 async function request(url, options = {}) {
   const res = await fetch(url, {
